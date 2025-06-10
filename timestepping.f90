@@ -28,7 +28,7 @@ enddo
 if((mod(iter,max_delay).ge.0).and.(mod(iter,max_delay).le.c_time-1)) then
 call copy_aux_send()
 endif
-if(mod(iter,max_delay).eq.c_time) then
+if(mod(iter,max_delay).eq.c_time-1) then
 call communicate_aux()
 do nbr=1,tot_nbrs
 delay(nbr) = 0
